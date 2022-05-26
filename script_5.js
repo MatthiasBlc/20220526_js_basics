@@ -35,15 +35,14 @@ function atLeast1(array) {
 }
 
 function mostRented(array) {
-  const rented = books.map(el => el.rented)
+  const rented = array.map(el => el.rented)
   max = Math.max(...rented)
   let result = array.find(obj => obj.rented === max);
   return result.title;
-
 }
 
 function leastRented(array) {
-  const rented = books.map(el => el.rented)
+  const rented = array.map(el => el.rented)
   min = Math.min(...rented)
   let result = array.find(obj => obj.rented === min);
   return result.title;
